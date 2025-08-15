@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: var(--bg-light);
+    position: relative;
+    min-height: 100vh;
+    color: var(--text-dark);
+}
+:root {
+    --primary-color: #2e7d32;
+    --secondary-color: #81c784;
+    --accent-color: #ffb74d;
+    --text-dark: #333;
+    --text-light: #fff;
+    --bg-light: #f9f9f9;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Side Menu Styles */
+.slide {
+    position: fixed;
+    height: 100%;
+    width: 280px;
+    overflow-y: auto;
+    background-color: #FFF;
+    left: -280px;
+    top: 0;
+    z-index: 10;
+    transition: all 0.3s ease-out;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.user-profile {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 auto 10px;
+    background-image: url('images/farmer-profile.png');
+    background-size: cover;
+}
+
+.slide h3 {
+    margin-bottom: 5px;
+}
+
+.slide ul {
+    flex-grow: 1;
+    padding: 10px 0;
+}
+
+.slide li {
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.slide a {
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: var(--text-dark);
+    padding: 10px 30px;
+    transition: all 0.2s ease;
+}
+
+.slide a:hover {
+    background-color: #f0f0f0;
+    color: var(--primary-color);
+}
+
+.slide a li i {
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+}
+
+.notification-badge {
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    margin-left: auto;
+}
+
+/* Toggle Button */
+.togglebtn {
+    position: fixed;
+    z-index: 11;
+    width: 40px;
+    height: 30px;
+    background-color: var(--primary-color);
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    top: 25px;
+    left: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 7px;
+}
+
+.togglebtn .common {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 100px;
+    transition: all 0.3s ease;
+}
+
+.chkbox {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    opacity: 0;
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.chkbox:checked ~ .overlay {
+    display: block;
+}
+
+.chkbox:checked ~ .slide {
+    left: 0;
+}
+
+.chkbox:checked ~ .togglebtn .top-line {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.chkbox:checked ~ .togglebtn .middle-line {
+    opacity: 0;
+}
+
+.chkbox:checked ~ .togglebtn .bottom-line {
+    transform: translateY(-7px) rotate(-45deg);
+}
+/*---------------------------------------------------------------------------------*/
+
+
+/* Main Content*/
