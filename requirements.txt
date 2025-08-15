@@ -1,7 +1,5 @@
-asgiref==3.7.2
-Django==3.2.25
+Django==3.2.25Django==3.2.25
 gunicorn==23.0.0
 Pillow==10.3.0
-psycopg2-binary==2.9.9
 whitenoise==6.5.0
 python-decouple==3.8
