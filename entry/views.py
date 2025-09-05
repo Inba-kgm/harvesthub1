@@ -15,7 +15,7 @@ def login(request):
     pwd=request.POST.get('pass')
     user= authenticate(request,username=name,password=pwd)
     if user is not None:
-         return redirect('https://adminer-agri.onrender.com/')
+         return redirect('https://adminer-agri.onrender.com/?pgsql=dpg-d2spp97diees7396e2k0-a.singapore-postgres.render.com&username=harvesthub_0cp7_user&db=harvesthub_0cp7&ns=public')
     if cracc.objects.filter(username=name,password=pwd).exists():
         usr=cracc.objects.get(username=name,password=pwd)
         occp=usr.occupation
