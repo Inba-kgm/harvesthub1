@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-em#adiensl)lc5u&lmhws!&apk$5s(pac76-37s=%d(y19(=9&
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'harvesthub-y72o.onrender.com',
+    'harvesthub1.onrender.com',
     'localhost',
     '127.0.0.1',
 ]
